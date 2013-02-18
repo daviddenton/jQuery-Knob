@@ -534,7 +534,7 @@
     $.fn.knobimate = function (o) {
         var that = this;
         return this.each(function () {
-            var endVal = parseInt(o.value) || 100;
+            var endVal = o.value || 0;
             var duration = o.duration || 500;
             $({value: parseInt(this.value)}).animate({value: endVal}, {
                 duration: duration,
